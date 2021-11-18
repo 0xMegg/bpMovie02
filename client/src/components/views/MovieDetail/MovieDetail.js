@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { API_URL, API_KEY, IMAGE_BASE_URL } from '../../Config'
-import MainImage from '../../views/LandingPage/Sections/MainImage';
+import MainImage from '../LandingPage/Sections/MainImage';
 import MovieInfo from './Sections/MovieInfo';
 import GridCards from '../commons/GridCards';
 import { Row } from 'antd';
@@ -53,7 +53,7 @@ function MovieDetail(props) {
                 <br />
                 {/* Actors Grid*/}
                 <div style={{ display: 'flex', justifyContent: 'center', margin: '2rem' }}>
-                    <button onclick={toggleActorView}>Toggle Actor View </button>
+                    <button onClick={toggleActorView}>Toggle Actor View </button>
                 </div>
 
                 {ActorToggle &&
@@ -62,7 +62,7 @@ function MovieDetail(props) {
                             <React.Fragment key={index}>
                                 <GridCards 
                                     image={ cast.profile_path ?
-                                        `${IMAGE_BASE_URL}w500${cast.profile_path}` : <div>no photo</div> }
+                                        `${IMAGE_BASE_URL}w500${cast.profile_path}` : null }
                                     characterName={cast.name}
                                 />
                             </React.Fragment>
