@@ -7,7 +7,7 @@ import Favorite from './Sections/Favorite';
 import { Row } from 'antd';
 
 function MovieDetail(props) {
-    
+
     let movieId = props.match.params.movieId
     const [Movie, setMovie] = useState([])
     const [Casts, setCasts] = useState([])
@@ -48,7 +48,7 @@ function MovieDetail(props) {
             {/* Body */}
             <div style={{ width: '85%', margin: '1rem auto' }}>
 
-                <div style={{ display: 'flex', justifyContent: 'flex-end'}}>
+                <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
                     <Favorite movieId={Movie} movieId={movieId} userFrom={localStorage.getItem('userId')} />
                 </div>
                 {/* Movie Info */}
@@ -64,9 +64,9 @@ function MovieDetail(props) {
                     <Row gutter={[16, 16]}>
                         {Casts && Casts.map((cast, index) => (
                             <React.Fragment key={index}>
-                                <GridCards 
-                                    image={ cast.profile_path ?
-                                        `${IMAGE_BASE_URL}w500${cast.profile_path}` : null }
+                                <GridCards
+                                    image={cast.profile_path ?
+                                        `${IMAGE_BASE_URL}w500${cast.profile_path}` : null}
                                     characterName={cast.name}
                                 />
                             </React.Fragment>
