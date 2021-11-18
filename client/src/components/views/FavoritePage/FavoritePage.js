@@ -7,11 +7,11 @@ function FavoritePage() {
     const [Favorites, setFavorites] = useState([])
 
     useEffect(() => {
-        Axios.post('/api/favorite/getFavoritedMovie',
+        Axios.post('/api/favorite/getFavoredMovie',
         { userFrom: localStorage.getItem('userId') })
             .then(response => {
                 if (response.data.success) {
-                    console.log(response.data)
+                    console.log('data1', response.data)
                     setFavorites(response.data.favorites)
                 } else {
                     alert('Fail to get movie info')

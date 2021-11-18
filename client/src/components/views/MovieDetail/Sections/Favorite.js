@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import Axios from 'axios'
 import { Button } from 'antd'
 
+// <Favorite movieInfo={Movie} movieId={movieId} userFrom={localStorage.getItem('userId')} />
+
+
 function Favorite(props) {
 
     const movieId = props.movieId
