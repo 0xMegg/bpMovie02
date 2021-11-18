@@ -6,9 +6,9 @@ function Favorite(props) {
 
     const movieId = props.movieId
     const userFrom = props.userFrom
-    // const movieTitle = props.movieInfo.title
-    // const moviePost = props.movieInfo.backdrop_path
-    // const movieRuntime = props.movieInfo.runtime
+    const movieTitle = props.movieInfo.title
+    const moviePost = props.movieInfo.backdrop_path
+    const movieRuntime = props.movieInfo.runtime
 
     const [FavoriteNumber, setFavoriteNumber] = useState(0);
     const [Favorited, setFavorited] = useState(false);
@@ -16,9 +16,9 @@ function Favorite(props) {
     let variable = {
         userFrom,
         movieId,
-        // movieTitle,
-        // moviePost,
-        // movieRuntime 
+        movieTitle,
+        moviePost,
+        movieRuntime 
     }
     useEffect(() => {
 
