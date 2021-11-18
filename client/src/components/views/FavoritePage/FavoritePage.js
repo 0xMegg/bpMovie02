@@ -36,8 +36,8 @@ function FavoritePage() {
 
                     {Favorites.map((favorite, index) => (
                         <tr key={index}>
-                            <td>{favorite.movieTitle}test1</td>
-                            <td>test2{favorite.movieRuntime} mins</td>
+                            <td>{favorite.movieTitle}</td>
+                            <td>{favorite.movieRuntime} mins</td>
                             <td><button>Remove</button></td>
                         </tr>
                     ))}
