@@ -47,6 +47,9 @@ function MovieDetail(props) {
             {/* Body */}
             <div style={{ width: '85%', margin: '1rem auto' }}>
 
+                <div style={{ display: 'flex', justifyContent: 'flex-end'}}>
+                    <button>Favorite</button>
+                </div>
                 {/* Movie Info */}
                 <MovieInfo movie={Movie} />
 
