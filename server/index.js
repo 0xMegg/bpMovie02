@@ -2,11 +2,45 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const cors = require('cors')
-
+var swaggerJsdoc = require("swagger-jsdoc");
+var swaggerUi = require("swagger-ui-express");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 
 const config = require("./config/key");
+
+const swaggerDocument = require('./swagger.json');
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+
+// swagger
+// app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+// const options = {
+//   definition: {
+//     openapi: "3.0.0",
+//     info: {
+//       title: "movie",
+//       version: "0.1.0",
+//     },
+//     servers: [
+//       {
+//         url: "http://localhost:5000/",
+//       },
+//     ],
+//   },
+//   apis: [
+//     "./routes/*.js",
+//     "./models/*.js",
+//   ],
+// };
+
+// const specs = swaggerJsdoc(options);
+// app.use("/api-docs",
+//   swaggerUi.serve,
+//   swaggerUi.setup(specs)
+// );
+
 
 // const mongoose = require("mongoose");
 // mongoose

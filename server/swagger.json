@@ -1,0 +1,96 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "bpMovie project",
+    "version": "0.1.0"
+  },
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/users/auth": {
+      "get": {
+        "summary": "GET /api/users/auth",
+        "responses": {
+          "200": {
+            "description": "authentication이 되어있는지 여부를 확인하는 api",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "_id": {
+                  "type": "integer"
+                },
+                "isAdmin": {
+                  "type": "boolean"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "lastname": {
+                  "type": "string"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Generic"
+        ]
+      }
+    },
+    "/api/favorite/favoriteNumber": {
+      "get": {
+        "summary": "xxx하는 api",
+        "responses": {
+          "200": {
+            "description": "더 상세한 설명",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "_id": {
+                  "type": "integer"
+                },
+                "isAdmin": {
+                  "type": "boolean"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "lastname": {
+                  "type": "string"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Generic"
+        ]
+      }
+    }
+  }
+}
